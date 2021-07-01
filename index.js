@@ -30,7 +30,7 @@ const logger = winston.createLogger({
 
 //connect to mongodb atlas
 mongoose.Promise = global.Promise
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true
 })
