@@ -51,7 +51,6 @@ router.get('/', (req, res) => {
 
 //Get User by ID
 router.get('/:userId', (req, res) => {
-  
   User.findById(req.params.userId).then(user => {
     console.log("get user by Id", user)
     if (user) res.status(200).send(user);
