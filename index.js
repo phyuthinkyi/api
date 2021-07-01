@@ -28,12 +28,6 @@ const logger = winston.createLogger({
   ]
 });
 
-//routes
-app.use('/api/users', usersRoute)
-app.use('/api/products', productRoute)
-
-
-
 //connect to mongodb atlas
 mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGO_URL, {
@@ -48,6 +42,10 @@ mongoose.connect(process.env.MONGO_URL, {
   logger.error(error.message)
   //logger.log("error", error.message) 
 })
+
+//routes
+app.use('/api/users', usersRoute)
+app.use('/api/products', productRoute)
 
 app.listen(PORT, ()=> {
   //console.log("Server Started at PORT", PORT)
