@@ -32,6 +32,8 @@ const logger = winston.createLogger({
 app.use('/api/users', usersRoute)
 app.use('/api/products', productRoute)
 
+
+
 //connect to mongodb atlas
 mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGO_URL, {
