@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
 
 //Get All Products
 router.get('/', (req, res) => {
-  User.find()
+  Product.find()
     .then((products) => res.status(200).send(products))
     .catch((error) => {
       res.status(500).send({
