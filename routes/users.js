@@ -40,7 +40,16 @@ router.post('/', async (req, res) => {
 //Get All Users
 router.get('/', (req, res) => {
   User.find()
-    .then((users) => res.status(200).send(users))
+    .then((users) => {
+      if(users.length == 0){
+        res.status(404).send({
+          "error": true,
+          "message": "User Not Found"
+        })
+      }else{
+        res.status(200).send(users)
+      }
+    })
     .catch((error) => {
       res.status(500).send({
         "error": true,
