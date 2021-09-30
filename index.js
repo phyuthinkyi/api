@@ -5,7 +5,7 @@ const app = express()
 require('dotenv').config()
 const usersRoute = require('./routes/users')
 const productRoute = require('./routes/products')
-const orderRoute = require('./routes/orders')
+//const orderRoute = require('./routes/orders')
 
 const PORT = process.env.PORT || 3000;
 
@@ -48,7 +48,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 //https://mobidevzoneshopapi.herokuapp.com/ (url)
 app.use('/api/users', usersRoute)
 app.use('/api/products', productRoute)
-app.use('/api/orders', orderRoute)
+//app.use('/api/orders', orderRoute)
 
 app.listen(PORT, ()=> {
   //console.log("Server Started at PORT", PORT)
