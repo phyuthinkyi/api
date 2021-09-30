@@ -46,6 +46,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 //routes
 app.use('/api/users', usersRoute)
 app.use('/api/products', productRoute)
+app.use('/api/orders')
 
 app.listen(PORT, ()=> {
   //console.log("Server Started at PORT", PORT)
