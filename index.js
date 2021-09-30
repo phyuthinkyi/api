@@ -44,6 +44,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 })
 
 //routes
+//https://mobidevzoneshopapi.herokuapp.com/ (url)
 app.use('/api/users', usersRoute)
 app.use('/api/products', productRoute)
 app.use('/api/orders')

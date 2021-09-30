@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const Order = require('../models/orders')
+
 router.post('/', (req, res) => {
   const order = new Order({
     voucherNo: req.body.voucherNo,
@@ -32,3 +33,5 @@ router.get('/', (req, res) => {
       })
     })
 })
+
+module.exports = router
