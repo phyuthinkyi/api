@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
   });
 
   user.save().then(user => {
-    console.log("Everything Well")
+    console.log("everything well")
     res.status(200).send({
       "error": false,
       "message": "Signup Successful!"
